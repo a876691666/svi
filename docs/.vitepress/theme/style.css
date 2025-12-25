@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  --vp-z-index-footer: 5010;
+  --vp-z-index-local-nav: 5020;
+  --vp-z-index-nav: 5030;
+  --vp-z-index-layout-top: 5040;
+  --vp-z-index-backdrop: 5050;
+  --vp-z-index-sidebar: 5060;
+}

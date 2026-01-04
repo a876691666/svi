@@ -2,9 +2,12 @@ import { defineConfig } from "vitepress";
 import { mdPlugin } from "../plugins";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "path";
+import { rmSync } from "fs";
 import { templateCompilerOptions } from "@tresjs/core";
 
 import Components from "unplugin-vue-components/vite";
+
+rmSync(resolve(__dirname, "../../../", "components.d.ts"), { force: true });
 
 export default defineConfig({
   title: "Svi 文档",
@@ -55,6 +58,13 @@ export default defineConfig({
         {
           text: "基础组件",
           items: [{ text: "SCanvas", link: "/components/SCanvas/" }],
+        },
+        {
+          text: "三维组件",
+          items: [
+            { text: "SGLTF", link: "/components/SGLTF/" },
+            { text: "SCharacter", link: "/components/SCharacter/" },
+          ],
         },
         {
           text: "UI 组件",

@@ -12,6 +12,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     SCanvas: typeof import('./lib/components/SCanvas/index.vue')['default']
+    SCharacter: typeof import('./lib/components/SCharacter/index.vue')['default']
+    SGLTF: typeof import('./lib/components/SGLTF/index.vue')['default']
     SUI: typeof import('./lib/components/SUI/index.vue')['default']
   }
 }
